@@ -3,6 +3,7 @@ This one took me 2 days, I am physically ill too. I felt soo bad while making th
 We Either Win or Learn. Never loose.
 
 THE GOAL: We will read and count the words from a text file, and print the top 10 words from the file.
+
 What I learned:- 
 Opening file from path, 
 making empty dictionary like a variable, 
