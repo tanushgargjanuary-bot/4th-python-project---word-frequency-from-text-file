@@ -1,0 +1,45 @@
+with open(r"C:\Users\Tanush Garg\Videos\sample_text.txt", 'r') as file:
+	content = file.read()
+
+words = content.split() # splitting
+counts = {} # declaring dictionary
+
+#first calculation of each words in the text.
+for w in words:
+	if w in counts:
+		counts[w] += 1
+	else:
+		counts[w] = 1
+
+# declaring variables
+max_word = None
+max_count = 0 	
+
+# setting maxword and maxcount with condition for pair
+for word, count in counts.items():
+	if count > max_count:
+		max_word = word
+		max_count = count
+
+# copy of counts
+temp_counts = counts.copy()
+# empty list
+top_words = []
+
+for i in range(10):
+	#resetting values for variables needed in loop
+	max_word = None
+	max_count = 0
+
+	for word, count in temp_counts.items():
+	# find max in temp_counts
+		if count > max_count:
+			max_count = count
+			max_word = word
+	# appending in top_words
+	top_words.append((max_word, max_count))
+	# delete from temp_count
+	del temp_counts[max_word]
+
+# printing top words
+print(top_words)
